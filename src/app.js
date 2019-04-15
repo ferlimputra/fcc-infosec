@@ -4,6 +4,7 @@
  ********************************************** */
 
 import express from "express"; // Do Not Edit
+import helmet from "helmet";
 import api from "./server.js";
 
 const app = express();
@@ -17,6 +18,7 @@ const app = express();
 // [Helmet](https://github.com/helmetjs/helmet) helps you secure your
 // Express apps by setting various HTTP headers.
 // Install the package, then require it.
+app.use(helmet());
 
 /** 2) Hide potentially dangerous information - `helmet.hidePoweredBy()` */
 

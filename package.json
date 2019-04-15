@@ -9,7 +9,8 @@
     "serve": "node dist/app.js"
   },
   "dependencies": {
-    "express": "*"
+    "express": "*",
+    "helmet": "^3.16.0"
   },
   "engines": {
     "node": "*"
