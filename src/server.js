@@ -56,7 +56,9 @@ router.get("/app-info", (req, res) => {
 
 router.get("/package.json", (req, res, next) => {
   readFile(`${__dirname}./package.json`, (err, data) => {
-    if (err) return next(err);
+    if (err) {
+      return next(err);
+    }
     res.type("txt").send(data.toString());
   });
 });
